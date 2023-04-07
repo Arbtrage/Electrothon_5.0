@@ -2,7 +2,9 @@ const express=require('express');
 const app=express();
 require('dotenv').config();
 const morgan=require('morgan');
-const route=require('./routes/auth.route');
+const auth=require('./routes/auth.route');
+const user=require('./routes/user.route');
+
 const connectDB=require('./services/connectDb');
 
 app.use(express.json());
@@ -11,7 +13,8 @@ app.use(express.json());
 connectDB();
 const port=process.env.PORT || 5000;
 
-app.use('/api',route);
+app.use('/api',auth);
+app.use('/api',user);
 app.use(morgan('dev'));
 
 // app.get('/',(req,res)=>{

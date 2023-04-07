@@ -19,8 +19,21 @@ const userSchema=new Schema({
     password:{
         type:String,
         default:"",
+    },
+    phone_number:{
+      type:String,
+      default:""
+    },
+    medication_ids:{
+      type:Array,
+      default:[],
+    },
+    family_member_ids:{
+      type:Array,
+      default:[],
     }
-})
+},
+{ timestamps: true });
 
 
 userSchema.pre('save',async function(next){
