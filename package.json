@@ -4,10 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "client":"cd client && npm run dev",
-    "server":"cd server && nodemon index.js",
+    "client": "cd client && npm run dev",
+    "server": "cd server && nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "react-router-dom": "^6.10.0"
+  }
 }
