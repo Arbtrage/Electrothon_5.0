@@ -1,8 +1,7 @@
 import React from "react";
 
-import "../styles/Home.css";
+import "../Styles/Home.css";
 import { Link, NavLink } from "react-router-dom";
-// import { GiStethoscope } from 'react-icons/gi';
 
 import logo from "../data/logo.png";
 import logosvg from "../data/logo.svg";
@@ -20,11 +19,11 @@ const Home = () => {
   return (
     <div>
       <header className="header" id="header">
-        <nav className="nav container">
+        <div className="nav container">
           <div className="logo">
             <img className="logo-img" src={logosvg} />
             <a href="#" className="nav__logo">
-              Y.W.K.T
+              Ywkit
             </a>
           </div>
           <div className="nav__menu" id="nav-menu">
@@ -73,7 +72,7 @@ const Home = () => {
               Sign Up
             </Link>
           </div>
-        </nav>
+        </div>
       </header>
       <main className="main">
         <section className="home section container" id="home">
@@ -98,8 +97,7 @@ const Home = () => {
               <h3 className="services__subtitle">Register Yourself</h3>
               <img className="services__img" src={user} />
               <p className="services__description">
-                Register yourself to the locker, secured by blockchain
-                technology.
+                Register yourself to the Yokit
               </p>
             </div>
 
