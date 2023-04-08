@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Myprofile() {
+function chatbot() {
   return (
     <div>
-      Dashboard
+      
     </div>
   )
 }
 
-export default Myprofile
+export default chatbot
