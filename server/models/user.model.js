@@ -24,6 +24,11 @@ const userSchema=new Schema({
       type:String,
       default:""
     },
+    isWhatsapp:{
+      type:Boolean,
+      enum:[true,false],
+      default:false
+    },
     medication_ids:{
       type:Array,
       default:[],
