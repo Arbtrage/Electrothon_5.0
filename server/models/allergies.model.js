@@ -6,9 +6,14 @@ const allergiesSchema=new Schema({
         type:String,
         required:true,
     },
-    allergy:{
-        type:Array,
-        default:[]
+    name:{
+        type:String,
+        required:true
+    },
+    severity:{
+        type:String,
+        enum:["High","Medium","Low"],
+        default:"Low",
     }
 })
 

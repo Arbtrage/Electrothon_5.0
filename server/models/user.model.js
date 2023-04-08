@@ -36,6 +36,10 @@ const userSchema=new Schema({
     family_member_ids:{
       type:Array,
       default:[],
+    },
+    allergy_ids:{
+      type:Array,
+      default:[]
     }
 },
 { timestamps: true });
