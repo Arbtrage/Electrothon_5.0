@@ -1,0 +1,112 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@500&display=swap');
+.login-container{
+    display: flex;
+    box-shadow: 1px 1px 5px 1px rgb(190, 190, 190);
+    height: 80vh;
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login__box-1{
+    width: 50%;
+    height: 100%;
+    background: url("../assets/login-back.jpg");
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.login__box-content{
+    height: 70%;
+    width: 75%;
+    background-color: rgba(255, 255, 255, 0.211);
+    align-items: center;
+}
+
+
+
+.login-line{
+    display: flex;
+    padding: 2px 15px;
+    align-items: center;
+}
+.login-line >img{
+    height: 4.5rem;
+    width: 5rem;
+    padding-left: 8px;
+    
+}
+.cred-heading{
+    color: rgb(245, 244, 244);
+    font-size: 2.5rem;
+    font-family: 'Golos Text', sans-serif;
+    font-weight: bolder;
+
+}
+
+.login__box-2{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box-2-container{
+    height: 80%;
+    width: 80%;
+}
+
+.box2-left > img{
+    height: 5rem;
+    width: 5rem;
+}
+.logoNdHead{
+    display: flex;
+    align-items: center;
+}
+
+.login__details{
+    padding-left: 0px ;
+}
+
+.gettingCreds{
+    display: flex;
+    justify-content: center;
+}
+
+.gettingCreds > form{
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+}
+
+.gettingCreds > form > input{
+    margin: 10px;
+    padding: 15px 5px;
+    height: 3rem;
+    box-sizing: border-box;
+    border: 0px;
+    border-bottom: 3px solid #484646;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    font-size: 1.1rem;
+}
+
+.login-btn{
+    width: 80%;
+    height: 3rem;
+    font-size: 1.5rem;
+    font-family: 'Golos Text', sans-serif;
+    display: block;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 2rem;
+    background: #3265be;
+    color: white;
+    cursor: pointer;
+}
