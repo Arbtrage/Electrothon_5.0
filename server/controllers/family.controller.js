@@ -11,15 +11,16 @@ module.exports = {
     });
     try {
       await familyMember.save();
+      const user = await User.findById(userId);
+      user.family_member_ids.push(familyMember._id);
+      await user.save();
       res.status(201).json({ success: true, data: familyMember });
     } catch (err) {
       console.error(err.message);
       res.status(500).json({ success: false, error: "Server error" });
     }
   },
-  modifyMember:async(req,res)=>{
-    
-  },
+  modifyMember: async (req, res) => {},
   deleteMember: async (req, res) => {
     const memberId = req.body.id;
     try {
