@@ -8,6 +8,7 @@ const family=require('../controllers/family.controller');
 router.post('/user/addMedicine',user.addMedicine);
 router.get('/user/getMedicines',user.getMedicines);
 router.get('/user/getMedicine',user.getMedicineById);
+router.delete('/user/deleteMedicine',user.deleteMedicine);
 
 
 router.post('/user/addFamilyMember',family.addMember);

@@ -1,25 +1,27 @@
 const Medicine = require("../models/userMedicine.model");
+const User = require("../models/user.model");
 
 module.exports = {
   addMedicine: async (req, res) => {
-    const { name, dosage, frequency } = req.body;
+    const { userId,name, dosage, frequency } = req.body;
 
     const newMedicine = new Medicine({
       name,
       dosage,
       frequency,
-      userId: req.body.userId,
+      userId,
     });
 
-    newMedicine
-      .save()
-      .then((medicine) => {
-        res.status(201).json({ success: true, data: medicine });
-      })
-      .catch((err) => {
-        console.error(err);
-        res.status(500).json({ success: false, error: "Server error" });
-      });
+    try {
+      await newMedicine.save();
+      const user = await User.findById(userId);
+      user.medication_ids.push(newMedicine._id);
+      await user.save();
+      res.status(201).json({ success: true, data: newMedicine });
+    } catch (error) {
+      console.error(err.message);
+      res.status(500).json({ success: false, error: "Server error" });
+    }
   },
   getMedicines: async (req, res) => {
     Medicine.find({ userId: req.body.userId })
@@ -48,20 +50,24 @@ module.exports = {
       });
   },
   deleteMedicine: async (req, res) => {
-    const medicineId = req.body.medicineId;
-
-    Medicine.findByIdAndDelete(medicineId)
-      .then((medicine) => {
-        if (!medicine) {
-          return res.status(404).json({ success: false, error: "Medicine not found" });
-        }
-
-        res.status(200).json({ success: true, data: medicine });
-      })
-      .catch((err) => {
-        console.error(err);
-        res.status(500).json({ success: false, error: "Server error" });
-      });
+    const medicineId = req.body.id;
+    try {
+      const deletedMedicine = await Medicine.findOneAndDelete({ _id: medicineId });
+      if (!deletedMedicine) {
+        return res
+          .status(404)
+          .json({ success: false, error: "Medicine not found" });
+      }
+      const user = await User.findByIdAndUpdate(
+        deletedMedicine.userId,
+        { $pull: { Medicine: medicineId } },
+        { new: true }
+      );
+      res.status(200).json({ success: true });
+    } catch (err) {
+      console.error(err.message);
+      res.status(500).json({ success: false, error: "Server error" });
+    }
   },
   updateMedicine: async (req, res) => {
     const medicineId = req.body.medicineId;

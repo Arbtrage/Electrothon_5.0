@@ -20,7 +20,7 @@ module.exports = {
       res.status(500).json({ success: false, error: "Server error" });
     }
   },
-  modifyMember: async (req, res) => {},
+//   modifyMember: async (req, res) => {},
   deleteMember: async (req, res) => {
     const memberId = req.body.id;
     try {
@@ -30,6 +30,11 @@ module.exports = {
           .status(404)
           .json({ success: false, error: "Member not found" });
       }
+      const user = await User.findByIdAndUpdate(
+        deletedMember.userId,
+        { $pull: { familyMembers: memberId } },
+        { new: true }
+      );
       res.status(200).json({ success: true });
     } catch (err) {
       console.error(err.message);
