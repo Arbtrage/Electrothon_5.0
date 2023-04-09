@@ -14,21 +14,21 @@ function Profile() {
               />
             </div>
             <div class="blog-slider__content" style={{minWidth: "60%"}}>
-              <span class="blog-slider__code">Age </span>
-              <div class="blog-slider__title">User name</div>
+              <span class="blog-slider__code">20 Years</span>
+              <div class="blog-slider__title">Ayush Kumar</div>
               <div class="blog-slider__text">
                 <ul >
                 
                     <li style={{display: "flex",  alignItems: "center", textAlign: "left", justifyContent: "space-between"}}>
-                        Name : Imposter
-                        <span>Phone : +91 99999999</span>
+                        Name : Ayush Kumar
+                        <span>Phone : +91 8102506748</span>
                         
                     </li>
                     <li style={{display: "flex",  alignItems: "center", textAlign: "left"}}>
                         Blood Group : B+ 
                     </li>
                     <li style={{display: "flex",  alignItems: "center", textAlign: "left"}}>
-                        Email : tempester@example.com 
+                        Email : ayush.krsh9@gmail.com 
                     </li>
                    
                 </ul>{" "}
