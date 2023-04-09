@@ -6,6 +6,7 @@ import logo from "../assets/login-logo.png";
 import { ToastContainer, toast } from "react-toastify";
 import Navbar from "../components/Navbar";
 import Axios from "../Api/Axios";
+import { DataObject } from "@mui/icons-material";
 
 function Login() {
   const [email, setemail] = useState("");
@@ -20,12 +21,21 @@ function Login() {
     console.log(user);
     try {
       // setloading(true);
-      const { data } = await Axios.post("/api/auth/login", user);
+    //   const  data = await Axios.post("/api/auth/login", user);
+      const data =fetch("http://localhost:5000/api/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(user),
+      })
+        .then((response) => response.json())
+        .then((data) => console.log(data))
+        .catch((error) => console.error(error));
       // setloading(false);
-      setTimeout(() => toast.success(" Successful"), 1050);
-      setTimeout(() => navigate("/"), 1000);
+      console.log(user)
+      localStorage.setItem('currentUser', JSON.stringify(data));
+      window.location.href='/dashboard';
 
-      setname("");
+      
       setpassword("");
       setemail("");
     } catch (error) {
@@ -99,18 +109,26 @@ function Login() {
                 </h1>
               </span>
               <div className="gettingCreds">
-                <form>
+                <form action='/dashboard'>
                   <input
                     type="email"
                     name="email"
                     placeholder="Enter your eMailID"
+                    value={email}
+                  onChange={(e) => {
+                    setemail(e.target.value);
+                  }}
                   />
                   <input
                     type="password"
                     name="password"
                     placeholder="Enter your Password"
+                    value={password}
+                  onChange={(e) => {
+                    setpassword(e.target.value);
+                  }}
                   />
-                  <button onClick={handleSubmit} className="login-btn">
+                  <button  className="login-btn">
                     Login
                   </button>
                 </form>
