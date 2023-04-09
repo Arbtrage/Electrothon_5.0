@@ -17,6 +17,7 @@ router.delete('/user/deleteMedicine',medicine.deleteMedicine);
 //Family membre route
 router.post('/user/addFamilyMember',family.addMember);
 router.delete('/user/deleteMember',family.deleteMember);
+router.delete('/user/getmembers',family.getMembers);
 
 //Allergy route
 router.post('/user/addAllergy',allergy.addAllergy);

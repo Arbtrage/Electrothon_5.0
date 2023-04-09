@@ -7,7 +7,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Axios from "../Api/Axios";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
-import { eventNames } from "../../../server/models/userFamily.model";
+// import { eventNames } from "../../../server/models/userFamily.model";
 
 function Signup() {
   const [name, setname] = useState("");
@@ -148,7 +148,7 @@ function Signup() {
                   }}
                 />
 
-                <button className="login-btn">
+                <button onClick={handleSubmit}className="login-btn">
                   Sign Up
                 </button>
 

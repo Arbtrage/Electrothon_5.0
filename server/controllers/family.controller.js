@@ -20,6 +20,17 @@ module.exports = {
       res.status(500).json({ success: false, error: "Server error" });
     }
   },
+
+  getMembers: async (req, res) => {
+    Family.find({ userId: req.body.userId })
+      .then((members) => {
+        res.status(200).json({ success: true, data: members });
+      })
+      .catch((err) => {
+        console.error(err);
+        res.status(500).json({ success: false, error: "Server error" });
+      });
+  },
 //   modifyMember: async (req, res) => {},
   deleteMember: async (req, res) => {
     const memberId = req.body.id;
