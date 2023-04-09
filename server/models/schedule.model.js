@@ -6,7 +6,7 @@ const scheduleSchema=new Schema({
         type:String,
         required:true
     },
-    userName:{
+    name:{
         type:String,
         required:true
     },

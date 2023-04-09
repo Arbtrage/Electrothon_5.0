@@ -31,13 +31,12 @@ module.exports={
                 if(doesExists) 
                     throw createError.Conflict(`A user with this ${email} email id already exists!!`);
         
-                const user=new User({userName,email,password});
+                const userhealth=new Health({});
+                await userhealth.save();
+                const health_id=userhealth._id;
+                const user=new User({userName,email,password,health_id});
                 await user.save();
                 console.log("first")
-                const userhealth=new Health({
-                    userId:user._id
-                })
-                await userhealth.save();
                 res.status(201).json({Message:"User registered with password"});
             } catch (error) {
                 console.log(error.message)
@@ -69,7 +68,7 @@ module.exports={
                 if (!isMatch)
                     throw createError.Unauthorized('Username/password not valid')
                 const token=jwt.encode(email);
-                res.json({User:user.firstname,Token:token});
+                res.json({User:user._id,Token:token});
             } catch (error) {
                 res.status(400).json({message:'Error'})
             }

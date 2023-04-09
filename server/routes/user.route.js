@@ -7,7 +7,7 @@ const allergy=require('../controllers/allergy.controller');
 const user=require('../controllers/user.controller');
 //User Route
 router.get('/user/getUser',user.getUser);
-
+router.post('/user/updateHealth',user.modifyHealth);
 //Medicine Route
 router.post('/user/addMedicine',medicine.addMedicine);
 router.get('/user/getMedicines',medicine.getMedicines);

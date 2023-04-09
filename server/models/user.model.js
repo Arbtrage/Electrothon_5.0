@@ -40,6 +40,10 @@ const userSchema=new Schema({
     allergy_ids:{
       type:Array,
       default:[]
+    },
+    health_id:{
+      type:String,
+      required:true
     }
 },
 { timestamps: true });

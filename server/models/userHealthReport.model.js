@@ -2,10 +2,6 @@ const mongoose=require('mongoose');
 const Schema=mongoose.Schema;
 
 const healthSchema=new Schema({
-    userId:{
-        type:String,
-        required:true
-    },
     bloodGroup:{
         type:String,
         default:"N/A"

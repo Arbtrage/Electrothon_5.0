@@ -1,30 +1,34 @@
 const Medicine = require("../models/userMedicine.model");
 const User = require("../models/user.model");
-const schedule=require('../../scheduler/models/schedule.model');
+const schedule=require('../models/schedule.model');
 
 module.exports = {
   addMedicine: async (req, res) => {
-    const { userId,name, dosage, frequency } = req.body;
+    const { userId,name, dosage, frequency,number } = req.body;
 
     const newMedicine = new Medicine({
+
       name,
       dosage,
       frequency,
       userId,
     });
     const newSchedule=new schedule({
+      userId,
       name,
+      whatsAppNumber:number,
       medTimings:frequency,
       medDuration:dosage
     })
     try {
+      await newSchedule.save();
       await newMedicine.save();
       const user = await User.findById(userId);
       user.medication_ids.push(newMedicine._id);
       await user.save();
       res.status(201).json({ success: true, data: newMedicine });
     } catch (error) {
-      console.error(err.message);
+      console.error(error.message);
       res.status(500).json({ success: false, error: "Server error" });
     }
   },

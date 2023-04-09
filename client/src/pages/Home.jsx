@@ -21,7 +21,7 @@ const Home = () => {
           <div className="home__data">
               <h1 className="home__title" style={{textAlign: "left"}}>You Will Know <br/> In Time</h1>
               <p className="home__description" style={{textAlign: "justify"}}>
-              The application sends timely notifications to remind users to take their medicine and provides an option to notify family members in case of missed doses. Also it generates monthly reports of user's medical history.
+              Never miss a dose! Get timely medication reminders, notify family members of missed doses, and generate monthly medical reports with our app.
               </p>              
               <Link to="/signup" className="button" style={{justifyContent: "center"}}>
                 Sign Up Now!
