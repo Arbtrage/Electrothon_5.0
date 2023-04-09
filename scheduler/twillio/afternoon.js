@@ -13,7 +13,7 @@ const sendNotifications=async(time)=>{
         const message = await client.messages.create({
             body: 'Good Afternoon, It is time for your afternoon medicines',
             from: 'whatsapp:+14155238886',
-            to: 'whatsapp:+919368875433'
+            to: 'whatsapp:+919984928455'
         });
         console.log(`Message sent at ${time.hour}:${time.minute}`);
       } catch (err) {
