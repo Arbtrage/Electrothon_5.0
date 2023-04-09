@@ -1,18 +1,6 @@
 import React from 'react'
-import { Link, NavLink } from "react-router-dom";
-// import { GiStethoscope } from 'react-icons/gi';
-
-import logo from "../data/logo.png";
-import logosvg from "../data/logo.svg";
-import sthetoscope from "../data/stethoscope.png";
-import down from "../data/upload.svg";
-import user from "../data/user.svg";
-import tick from "../data/tick.svg";
-import store from "../data/store.png";
-import doc from "../data/doc.svg";
-import dissease from "../data/dissease.png";
-import member1 from "../data/1.png";
-import member2 from "../data/2.png";
+import { Link } from "react-router-dom";
+import logosvg from "../assets/login-logo.png";
 import '../Styles/Home.css'
 
 
@@ -24,7 +12,7 @@ function Navbar() {
           <div className="logo">
             <img className="logo-img" src={logosvg} />
             <a href="#" className="nav__logo">
-              Y.W.K.T
+              YWKIT
             </a>
           </div>
           <div className="nav__menu" id="nav-menu">
