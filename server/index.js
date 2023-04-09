@@ -6,6 +6,12 @@ const auth=require('./routes/auth.route');
 const user=require('./routes/user.route');
 
 const connectDB=require('./services/connectDb');
+const cors = require('cors');
+
+
+// This should be written in top
+app.use(cors());  
+
 
 app.use(express.json());
 app.use(morgan('dev'));
