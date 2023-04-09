@@ -189,7 +189,7 @@ body.dark-theme {
 }
 
 .logo-img {
-  width: 40px;
+  width: 80px;
   height: auto;
 }
 .sto-img {
@@ -268,7 +268,9 @@ body.dark-theme {
   font-size: var(--biggest-font-size);
   font-weight: var(--font-bold);
   margin-bottom: var(--mb-0-75);
+
 }
+
 
 .home__description {
   margin-bottom: var(--mb-2);
@@ -1040,7 +1042,7 @@ td a:hover {
 /* For large devices */
 @media screen and (min-width: 968px) {
   .logo-img {
-    width: 60px;
+    width: 80px;
   }
   .logo a {
     font-size: 1.6rem;
