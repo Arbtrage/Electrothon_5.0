@@ -1,0 +1,41 @@
+
+
+#medic-main{
+    padding: 2%;
+}
+
+.render-btn{
+    cursor: pointer;
+    height: 3rem;
+    width: 30%;
+    padding: 1%;
+    border-radius: 15px;
+    margin: 15px;
+    font-size: 1.2rem;
+    border: 0px;
+    color: white;
+    font-weight: 500;
+    background-image: linear-gradient(#32a2be, #389fd3, #3265be);
+    
+}
+
+.img-input{
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    margin-top: 5%;
+    height: 70%;
+    border: 2px dashed black;
+}
+ #file-input{
+    display: none;
+ }
+ #file-label{
+    background-color: rgb(236, 231, 231);
+    font-size: 1.5rem;
+    height: 80%;
+    width: 100%;
+    display: block;
+    margin: auto;
+ }

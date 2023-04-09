@@ -7,6 +7,9 @@ import Signup from './pages/Signup';
 import UserDashboard from './pages/UserDashboard';
 import AddMedicine from './pages/AddMedicine';
 import AddFamilyMember from './pages/AddFamilyMember';
+import Allergies from './pages/Allergies';
+import Medicalhistory from './pages/Medic';
+import HealthDetails from './pages/HealthDetails';
 
 
 function App() {
@@ -19,6 +22,10 @@ function App() {
                 <Route path="/signup" element = {(<Signup />)} />
                 <Route path="/dashboard" element = {(<UserDashboard />)} />
                 <Route path="/addmedicine" element = {(<AddMedicine />)} />
+                
+                <Route path= "/HealthDetails" element = {(<HealthDetails/>)} />
+                <Route path ="/allergies" element= {(<Allergies/>)} />
+                <Route path="/MedicalHistory" element={(<Medicalhistory/>)} />
                 <Route path="/addmembers" element = {(<AddFamilyMember />)} />
               </Routes>
       </BrowserRouter>

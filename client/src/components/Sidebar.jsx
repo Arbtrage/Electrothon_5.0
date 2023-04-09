@@ -18,46 +18,46 @@ function Sidebar() {
         <div className="menu-items">
           <ul className="nav-links">
             <li>
-              <a href="#">
-                <i className="uil uil-estate"></i>
                 <Link to="/dashboard">
-                  <span className="link-name">Dahsboard</span>
+                <i className="uil uil-estate"></i>
+                  <span className="link-name">Dashboard</span>
                 </Link>
-              </a>
             </li>
             <li>
-              <a href="#">
+              <Link to={"/healthdetails"}>
                 <i className="uil uil-files-landscapes"></i>
-                <span className="link-name">Medical Condition</span>
-              </a>
+                <span className="link-name">Health Details</span>
+              </Link>
+              
             </li>
             <li>
-              <a href="#">
+              <Link to= "/allergies">
                 <i className="uil uil-chart"></i>
                 <span className="link-name">Allergies</span>
-              </a>
+              </Link>
+              
             </li>
             <li>
-              <a href="#">
+              <Link to = "/medicalhistory">
                 <i className="uil uil-thumbs-up"></i>
                 <span className="link-name">Medical History</span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#">
-                <i className="uil uil-comments"></i>
+              
                 <Link to="/addmembers">
+                <i className="uil uil-comments"></i>
                   <span className="link-name">Add Members</span>
                 </Link>
-              </a>
+            
             </li>
             <li>
-              <a href="#">
-                <i className="uil uil-share"></i>
+              
                 <Link to="/addmedicine">
+                <i className="uil uil-share"></i>
                   <span className="link-name">Add Medicine</span>
                 </Link>
-              </a>
+              
             </li>
           </ul>
 
@@ -71,16 +71,7 @@ function Sidebar() {
 
             </li>
 
-            {/* <li className="mode">
-              <a href="#">
-                <i className="uil uil-moon"></i>
-                <span className="link-name">Dark Mode</span>
-              </a>
-
-              <div className="mode-toggle">
-                <span className="switch"></span>
-              </div>
-            </li> */}
+  
           </ul>
         </div>
       </nav>
