@@ -1,5 +1,6 @@
 const Medicine = require("../models/userMedicine.model");
 const User = require("../models/user.model");
+const schedule=require('../../scheduler/models/schedule.model');
 
 module.exports = {
   addMedicine: async (req, res) => {
@@ -11,7 +12,11 @@ module.exports = {
       frequency,
       userId,
     });
-
+    const newSchedule=new schedule({
+      name,
+      medTimings:frequency,
+      medDuration:dosage
+    })
     try {
       await newMedicine.save();
       const user = await User.findById(userId);

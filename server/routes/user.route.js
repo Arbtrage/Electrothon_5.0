@@ -1,15 +1,18 @@
 const express=require('express');
 const router=express.Router();
 
-const user=require('../controllers/medicine.controller');
+const medicine=require('../controllers/medicine.controller');
 const family=require('../controllers/family.controller');
 const allergy=require('../controllers/allergy.controller');
+const user=require('../controllers/user.controller');
+//User Route
+router.get('/user/getUser',user.getUser);
 
 //Medicine Route
-router.post('/user/addMedicine',user.addMedicine);
-router.get('/user/getMedicines',user.getMedicines);
-router.get('/user/getMedicine',user.getMedicineById);
-router.delete('/user/deleteMedicine',user.deleteMedicine);
+router.post('/user/addMedicine',medicine.addMedicine);
+router.get('/user/getMedicines',medicine.getMedicines);
+router.get('/user/getMedicine',medicine.getMedicineById);
+router.delete('/user/deleteMedicine',medicine.deleteMedicine);
 
 //Family membre route
 router.post('/user/addFamilyMember',family.addMember);

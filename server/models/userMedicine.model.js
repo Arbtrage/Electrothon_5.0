@@ -15,8 +15,8 @@ const medicineSchema=new Schema({
         required:true
     },
     frequency:{
-        type:String,
-        required:true
+        type:Array,
+        default:[]
     }
 },
 { timestamps: true });
