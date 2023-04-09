@@ -1,6 +1,7 @@
 import React from "react";
 import "../Styles/Dashboard.css";
 import { Link } from "react-router-dom";
+import logo from "../assets/login-logo.png"
 
 function Sidebar() {
   return (
@@ -8,10 +9,10 @@ function Sidebar() {
       <nav>
         <div className="logo-name">
           <div className="logo-image">
-            {/* <!--<img src="images/logo.png" alt="">--> */}
+            <img src={logo} alt=""  style={{width: "4rem"}}/>
           </div>
 
-          <span className="logo_name">Ywkit</span>
+          <span className="logo_name" style={{marginLeft: "0px"}}>Ywkit</span>
         </div>
 
         <div className="menu-items">
@@ -62,13 +63,15 @@ function Sidebar() {
 
           <ul className="logout-mode">
             <li>
-              <a href="#">
-                <i className="uil uil-signout"></i>
+              <Link to="/">
+              <i className="uil uil-signout"></i>
                 <span className="link-name">Logout</span>
-              </a>
+              </Link>
+
+
             </li>
 
-            <li className="mode">
+            {/* <li className="mode">
               <a href="#">
                 <i className="uil uil-moon"></i>
                 <span className="link-name">Dark Mode</span>
@@ -77,7 +80,7 @@ function Sidebar() {
               <div className="mode-toggle">
                 <span className="switch"></span>
               </div>
-            </li>
+            </li> */}
           </ul>
         </div>
       </nav>
