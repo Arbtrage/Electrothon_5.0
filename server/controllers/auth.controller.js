@@ -1,5 +1,7 @@
 const User=require('../models/user.model');
+const Health=require('../models/userHealthReport.model');
 const jwt=require('../services/jwtService');
+
 
 module.exports={
     signUp:async(req,res)=>{
@@ -28,8 +30,14 @@ module.exports={
         
                 const user=new User({userName,email,password});
                 await user.save();
+                console.log("first")
+                const userhealth=new Health({
+                    userId:user._id
+                })
+                await userhealth.save();
                 res.status(201).json({Message:"User registered with password"});
             } catch (error) {
+                console.log(error.message)
                 res.status(400).json({message:'Error'})
             }
 
