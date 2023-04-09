@@ -291,3 +291,15 @@ thead th.active,tbody td.active {
   width: 2rem;
   height: auto;
 }
+
+.family-form > input{
+  width: 70%;
+  border-radius: 10px;
+  padding: 8px;
+}
+.family-form > input[type = "button"]{
+  background: #3265be;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}

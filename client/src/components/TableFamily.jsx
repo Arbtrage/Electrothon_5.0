@@ -131,7 +131,7 @@ function TableFamily() {
             </table>
         </section>
        </main>
-       <form style={{
+       <form className='family-form' style={{
             display: 'flex', flexDirection: 'column', gap: '1rem',
             backgroundColor: 'rgb(3, 201, 215)',
             justifyContent: 'center',
@@ -147,14 +147,12 @@ function TableFamily() {
               name="Name"
               required="required"
               placeholder="Member Name"
-              
             />
             <input
               type="text"
               name="Relationship"
               required="required"
               placeholder="Relationship"
-              
             />
             <input
               type="text"

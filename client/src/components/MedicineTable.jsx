@@ -130,7 +130,7 @@ function MedicineTable() {
             </table>
         </section>
        </main>
-       <form style={{
+       <form className="family-form" style={{
             display: 'flex', flexDirection: 'column', gap: '1rem',
             backgroundColor: 'rgb(3, 201, 215)',
             justifyContent: 'center',
