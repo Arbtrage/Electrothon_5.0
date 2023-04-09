@@ -15,8 +15,11 @@ module.exports={
         
                 const user=new User({userName,email});
                 await user.save();
+                console.log("Just Checking")
+                console.log(user)
                 res.status(201).json({Message:"User registered"});
             }catch(error){
+                console.log("Just Checking")
                 res.status(400).json({message:'Error'})
             }
         }
