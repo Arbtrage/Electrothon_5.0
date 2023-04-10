@@ -30,8 +30,8 @@ Our application solves these problems by sending timely notifications to remind 
 ## Authors
 - [@Sayantan](https://www.github.com/Arbtrage)
 - [@Bevan](https://github.com/bevan10)
-- [@Ayush](https://github.com/Udit-UD)
-- [@Udit](https://github.com/TheArchitect19)
+- [@Ayush](https://github.com/TheArchitect19)
+- [@Udit](https://github.com/Udit-UD)
 
 
 ## Thank You
