@@ -1,3 +1,4 @@
+![Electrothon_5.0](https://socialify.git.ci/Arbtrage/Electrothon_5.0/image?description=1&descriptionEditable=Never%20miss%20a%20dose!%20Get%20timely%20medication%20reminders%2C%20notify%20family%20members%20of%20missed%20doses%2C%20and%20generate%20monthly%20medical%20reports%20with%20our%20app.&font=Raleway&forks=1&language=1&name=1&owner=1&pattern=Solid&stargazers=1&theme=Light)
 # You Will Know In Time (YWKIT)
 
 Forgetting to take medication or missing doses can have serious consequences, especially for people with chronic illnesses or those taking multiple medications. It can lead to worsened health conditions, hospitalizations, and even death in extreme cases. Many people also struggle to keep track of their medical history, making it difficult for healthcare providers to provide effective treatment.
