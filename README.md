@@ -19,9 +19,7 @@ Our application solves these problems by sending timely notifications to remind 
 ## Application Flow
 ![image](https://user-images.githubusercontent.com/100552235/230758320-4b3e5b5c-4caa-470a-95f7-3a81eb6d5e53.png)
 
-## Timed messages
-  Our app sends timed messages to users to their WhatsApp 
-  ![ezgif com-video-to-gif (4)](https://user-images.githubusercontent.com/100552235/230758592-14099ab6-4977-4bd4-9c64-fe355261e851.gif)
+
 
 ## Screenschots
 ![WhatsApp Image 2023-04-09 at 11 48 35](https://user-images.githubusercontent.com/100552235/230758337-1251bedf-fdc9-42fd-a550-c0833f536073.jpeg)
